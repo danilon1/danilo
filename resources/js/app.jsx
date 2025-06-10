@@ -62,7 +62,7 @@ function App() {
             <button
                 onClick={() => setDark(!dark)}
                 className={`fixed top-4 right-4 z-50 p-3 rounded-full transition
-    ${dark ? "bg-yellow-400 hover:bg-yellow-500" : "bg-indigo-600 hover:bg-indigo-700"}`}
+                ${dark ? "bg-yellow-400 hover:bg-yellow-500" : "bg-indigo-600 hover:bg-indigo-700"}`}
                 aria-label="Toggle dark mode"
                 title={dark ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
             >
@@ -162,35 +162,29 @@ function App() {
                 </div>
             </section>
 
-            {/* Habilidades */}
             <section
                 id="skills"
-                className={`py-20 px-6 ${dark ? "bg-gray-900" : "bg-white"
-                    } transition-colors duration-500`}
+                className={`py-20 px-6 ${dark ? "bg-gray-900" : "bg-white"} transition-colors duration-500`}
             >
                 <h2
-                    className={`text-3xl font-bold text-center mb-12 ${dark ? "text-white" : "text-gray-900"
-                        }`}
+                    className={`text-3xl font-bold text-center mb-12 ${dark ? "text-white" : "text-gray-900"}`}
                 >
                     ¿Qué puedo hacer por vos?
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-[1536px] mx-auto px-4">
                     {skills.map((skill) => (
                         <div
                             key={skill.name}
-                            className={`rounded-2xl p-6 shadow-md hover:shadow-xl transition ${dark ? "bg-gray-800" : "bg-white"}`}
+                            className={`rounded-2xl p-6 shadow-md hover:shadow-xl transition w-full ${dark ? "bg-gray-800 text-gray-300" : "bg-white text-gray-700"}`}
                         >
                             <div className="flex items-center gap-3 mb-4">
                                 <div className="text-4xl">{skill.icon}</div>
-                                <h3 className={`text-xl font-semibold ${dark ? "text-white" : "text-gray-900"}`}>
+                                <h3 className={`text-lg sm:text-xl font-semibold break-words ${dark ? "text-white" : "text-gray-900"}`}>
                                     {skill.name}
                                 </h3>
                             </div>
-
-                            {/* Descripción */}
-                            <p className={`${dark ? "text-gray-300" : "text-gray-600"}`}>
-                                {skill.desc}
-                            </p>
+                            <p className="text-base sm:text-lg">{skill.desc}</p>
                         </div>
                     ))}
                 </div>

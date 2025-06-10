@@ -74,7 +74,7 @@ const FormComponent = ({ dark }) => {
                         value={form.nombre}
                         onChange={handleChange}
                         required
-                        className={`w-full p-3 rounded-lg border placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 
+                        className={`w-full p-3 rounded-lg border placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 
                         ${dark ? "bg-gray-800 border-gray-700 text-white placeholder-gray-400" : "bg-gray-100 border-gray-300 text-black"}
                         ${errors.nombre ? 'border-red-500' : ''}`}
                     />
@@ -89,7 +89,7 @@ const FormComponent = ({ dark }) => {
                         value={form.email}
                         onChange={handleChange}
                         required
-                        className={`w-full p-3 rounded-lg border placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 
+                        className={`w-full p-3 rounded-lg border placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 
                         ${dark ? "bg-gray-800 border-gray-700 text-white placeholder-gray-400" : "bg-gray-100 border-gray-300 text-black"}
                         ${errors.email ? 'border-red-500' : ''}`}
                     />
@@ -104,7 +104,7 @@ const FormComponent = ({ dark }) => {
                         onChange={handleChange}
                         required
                         rows="4"
-                        className={`w-full p-3 rounded-lg border placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 
+                        className={`w-full p-3 rounded-lg border placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 
                         ${dark ? "bg-gray-800 border-gray-700 text-white placeholder-gray-400" : "bg-gray-100 border-gray-300 text-black"}
                         ${errors.mensaje ? 'border-red-500' : ''}`}
                     />
